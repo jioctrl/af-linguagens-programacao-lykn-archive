@@ -27,7 +27,7 @@ if (formulario) {
 }
 
 // Carrossel membros
-const slides = document.querySelectorAll(".slide, .slide-ativo");
+const slides = document.querySelectorAll(".slides, .slide-ativo");
 const btnAnterior = document.querySelector(".anterior");
 const btnProximo = document.querySelector(".proximo");
 
@@ -37,10 +37,10 @@ function mostrarSlide(indice) {
 
     slides.forEach(slide => {
         slide.classList.remove("slide-ativo");
-        slide.classList.add("slide");
+        slide.classList.add("slides");
     });
 
-    slides[indice].classList.remove("slide");
+    slides[indice].classList.remove("slides");
     slides[indice].classList.add("slide-ativo");
 }
 

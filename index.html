@@ -18,139 +18,346 @@ Data de entrega: 07/06
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">LYKN Archive</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">Galeria</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contato.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <header class="menu">
+        <h1 class="titulo-menu">LYKN Archive</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
         </nav>
     </header>
 
     <main>
         <!-- Imagem principal da 'Home' -->
-        <div class="banner-principal">
-            <img src="./img/banner-claro.jpg" alt="Foto do grupo LYKN; Em ordem: Hong, Nut, Lego, Tui, William.">
-        </div>
+        <section class="hero">
+            <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2"></button>
+                </div>
 
-        <!-- Uma breve introdução ao grupo -->
-        <div class="container">
-            <h1>Introdução ao grupo</h1>
-            <p>
-                O LYKN é um grupo de T-pop com 5 integrantes que foi formado através do programa de sobrevivência
-                "Project Alpha",
-                onde 27 meninos competiram, durando de 4 de dezembro de 2022 até 5 de março de 2023.
-                O grupo teve sua estreia no dia 5 de maio de 2023 com o single "May I" através da gravadora Riser Music,
-                subsidiária da GMMTV,
-                uma das maiores empresas do entretenimento tailandês.
-            </p>
-        </div>
-
-        <section>
-            <!-- Carrossel: Membros do grupo -->
-            <div class="carrossel">
-
-                <div class="slide-ativo">
-                    <div class="imagem">
-                        <img src="./img/william.jpg" alt="William">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/banner-claro.jpg" class="d-block w-100" alt="LYKN">
                     </div>
 
-                    <div class="texto">
-                        <h2>William</h2>
-                        <p>
-                            William Jakrapatr Kaewpanpong, nasceu dia 14 de fevereiro de 2005
-                            Posição: Vocalista principal
-                        </p>
+                    <div class="carousel-item">
+                        <img src="./img/banner-escuro.jpg" class="d-block w-100" alt="LYKN" loading="lazy">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="./img/banner-escuro-02.jpg" class="d-block w-100" alt="LYKN" loading="lazy"> 
                     </div>
                 </div>
 
-                <div class="slide">
-                    <div class="imagem">
-                        <img src="./img/lego.jpg" alt="Imagem 2">
-                    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
 
-                    <div class="texto">
-                        <h2>Lego</h2>
-                        <p>
-                            Lego Rapeepong Supatineekitdecha, nasceu dia 11 de fevereiro de 2006
-                            Posição: Dançarino principal
-                        </p>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <div class="imagem">
-                        <img src="./img/nut.jpg" alt="Imagem 3">
-                    </div>
-
-                    <div class="texto">
-                        <h2>Nut</h2>
-                        <p>
-                            Nut Thanat Danjesda, nasceu dia 20 de abril de 2003
-                            Posição: Dançarino e vocalista
-                        </p>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <div class="imagem">
-                        <img src="./img/hong.jpg" alt="Imagem 3">
-                    </div>
-
-                    <div class="texto">
-                        <h2>Hong</h2>
-                        <p>
-                            Hong Pichetpong Chiradatesakunvong, nasceu dia 16 de outubro de 2003
-                            Posição: Rapper principal e dançarino
-                        </p>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <div class="imagem">
-                        <img src="./img/tui.jpg" alt="Imagem 3">
-                    </div>
-
-                    <div class="texto">
-                        <h2>Tui</h2>
-                        <p>
-                            Tui Chayatorn Trairattanapradit, nasceu dia 24 de março de 2004
-                            Posição: Vocalista
-                        </p>
-                    </div>
-                </div>
-
-                <button class="anterior">&#10094;</button>
-                <button class="proximo">&#10095;</button>
-
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </section>
 
+
+        <!-- Uma breve introdução ao grupo, tema do site -->
         <section class="apresentacao">
-            <!-- Apresentação do tema -->
+            <div>
+                <h2>INTRODUÇÃO AO GRUPO</h2>
+                <p>
+                    O LYKN é um grupo de T-pop com 5 integrantes que foi formado através do programa de sobrevivência
+                    "Project Alpha",
+                    onde 27 meninos competiram por vagas no grupo final, o programa começou em 4 de dezembro de 2022 e
+                    terminou em 5 de março de 2023.
+                    O grupo teve sua estreia no dia 5 de maio de 2023 com o single "May I" através da gravadora Riser
+                    Music, subsidiária da GMMTV, uma das maiores empresas do entretenimento tailandês.
+                </p>
+            </div>
         </section>
 
+        <!-- Carrossel: Membros do grupo -->
+        <section class="caixa-membros">
+            <h2>INTEGRANTES</h2>
+            <div class="carrossel-membros">
+                <div class="slide-ativo">
+                    <div class="imagem">
+                        <img src="./img/william.jpg" alt="William" loading="lazy">
+                    </div>
+
+                    <div class="texto">
+                        <h3 id="nome-membros">William</h3>
+                        <p>
+                            William Jakrapatr Kaewpanpong, nasceu dia 14 de fevereiro de 2005.
+                        </p>
+                        <p>
+                            Altura: 178cm;<br>Nasceu em Hat Yai, Tailândia.
+                        </p>
+                        <p>
+                            Posição: Vocalista principal; Ele canta desde os seus 13 anos e já foi vocalista de uma
+                            banda chamada 'Broccoli' na época da escola.
+                            Além de cantar ele também sabe tocar guitarra e piano. Fora do grupo ele também trabalha na
+                            mesma empresa como ator de BL (Boys' Love)
+                            com o ator Est Supha Sangaworawong, ex nadador competitivo que representava a seleção
+                            nacional tailandesa.
+                        </p>
+                        <p>
+                            Instagram: <a href="https://www.instagram.com/williamjkp">@williamjkp</a><br>X (Twitter): <a
+                                href="https://x.com/Williamjkp1">@Williamjkp1</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <div class="imagem">
+                        <img src="./img/lego.jpg" alt="Lego" loading="lazy">
+                    </div>
+
+                    <div class="texto">
+                        <h3 id="nome-membros">Lego</h3>
+                        <p>
+                            Lego Rapeepong Supatineekitdecha, nasceu dia 11 de fevereiro de 2006.
+                        </p>
+                        <p>
+                            Altura: 168cm;<br>Nasceu em Nakhon Ratchasima, Tailândia.
+                        </p>
+                        <p>
+                            Posição: Dançarino principal e membro mais novo;
+                            Começou a dançar desde os 4 anos e antes de entrar no Project Alpha, aos 16 anos,
+                            já participou de diversas competições de dança dentro e fora da Tailândia.
+                        </p>
+                        <p>
+                            Recentemente, em fevereiro de 2026, ele passou pela ordenação temporária do budismo, chamado
+                            <i>buat phra</i>, cumprindo a
+                            promessa que havia feito à sua mãe de ordernar aos 20 anos, perceptível pelo comprimento do
+                            seu cabelo atualmente.
+                        </p>
+                        <p>
+                            Instagram: <a href="https://www.instagram.com/le_tsgo_eating/">@le_tsgo_eating</a><br>X
+                            (Twitter): <a href="https://x.com/realxlg">@realxlg</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <div class="imagem">
+                        <img src="./img/nut.jpg" alt="Nut" loading="lazy">
+                    </div>
+
+                    <div class="texto">
+                        <h3 id="nome-membros">Nut</h3>
+                        <p>
+                            Nut Thanat Danjesda, nasceu dia 20 de abril de 2003.
+                        </p>
+                        <p>
+                            Altura: 178cm;<br>Nasceu na Tailândia, supõe-se que na cidade de Bangkok.
+                        </p>
+                        <p>
+                            Posição: Dançarino e vocalista; Começou a dançar aos 16 anos,
+                            fez parte de um grupo de dança cover chamado '<i>Monkey Kiss</i>' no ensino médio,
+                            e começou a cantar com 18 para o Project Alpha.
+                        </p>
+                        <p>
+                            Instagram: <a href="https://www.instagram.com/nnutdan/">@nnutdan</a><br>
+                            IG secundário: <a href="https://www.instagram.com/beanslifeeee">@beanslifeeee</a><br>
+                            X (Twitter): <a href="https://x.com/nnutdan">@nnutdan</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <div class="imagem">
+                        <img src="./img/hong.jpg" alt="Hong" loading="lazy">
+                    </div>
+
+                    <div class="texto">
+                        <h3 id="nome-membros">Hong</h3>
+                        <p>
+                            Hong Pichetpong Chiradatesakunvong, nasceu dia 16 de outubro de 2003.
+                        </p>
+                        <p>
+                            Altura: 178cm;<br>Nasceu na Tailândia, supõe-se que na cidade de Bangkok.
+                        </p>
+                        <p>
+                            Posição: Rapper principal e dançarino; Começou a fazer rap apenas durante o Project Alpha,
+                            já que a maioria dos competidores eram vocalistas, e chamou atenção dos jurados e da
+                            audiência.
+                            Assim como Nut também participou de um grupo de dança cover durante o ensino médio, chamado
+                            '<i>TNT</i>'.
+                        </p>
+                        <p>
+                            Instagram: <a href="https://www.instagram.com/hongshihoshi/">@hongshihoshi</a><br>
+                            IG secundário: <a
+                                href="https://www.instagram.com/introduction2youth">@introduction2youth</a><br>
+                            X (Twitter): <a href="https://x.com/hongshihoshi03">@hongshihoshi03</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <div class="imagem">
+                        <img src="./img/tui.jpg" alt="Tui" loading="lazy">
+                    </div>
+
+                    <div class="texto">
+                        <h3 id="nome-membros">Tui</h3>
+                        <p>
+                            Tui Chayatorn Trairattanapradit, nasceu dia 24 de março de 2004.
+                        </p>
+                        <p>
+                            Altura: 175cm;<br>Nasceu em Bangkok, Tailândia.
+                        </p>
+                        <p>
+                            Posição: Vocalista, produtor e compositor; Ele canta desde seus 6 anos,
+                            e começou a dançar aos 15. Já ajudou a escrever diversas músicas do grupo e
+                            possui duas onde compôs e produziu as músicas praticamente inteiras: 'LYKYOU' e 'If Only'.
+                            Além disso, também é conhecido por suas habilidades de beatboxing.
+                        </p>
+                        <p>
+                            Instagram: <a href="https://www.instagram.com/m.tuiiii/">@m.tuiiii</a><br>
+                            X (Twitter): <a href="https://x.com/TuiChayatorn">@TuiChayatorn</a>
+                        </p>
+                    </div>
+                </div>
+                <button class="anterior">&#10094;</button>
+                <button class="proximo">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Cards principais - Séries -->
         <section class="destaques">
-            <!-- Cards principais -->
+            <h2>SÉRIES QUE PARTICIPARAM</h2>
+            <div class="series-grid">
+                <!-- 1 - ThamePo -->
+                <div class="serie-card">
+                    <img src="img/thamepo.jpg" alt="ThamePo" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>ThamePo</h3>
+                        <p class="data">
+                            Dezembro 2024 - Março 2025
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            LYKN como 'MARS'
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2 - My Magic Prophecy -->
+                <div class="serie-card">
+                    <img src="img/mymagicprophecy.jpg" alt="My Magic Prophecy" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>My Magic Prophecy</h3>
+                        <p class="data">
+                            Julho - Setembro 2025
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            Nut como 'Thiumek' (Convidado)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 - Muteluv -->
+                <div class="serie-card">
+                    <img src="img/muteluv.jpg" alt="MuTeLuv: Diva Deva Mata" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>MuTeLuv: Diva Deva Mata</h3>
+                        <p class="data">
+                            Outubro - Novembro 2025
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            Lego como 'Ingky' (Papel principal)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 - Me and Thee -->
+                <div class="serie-card">
+                    <img src="img/meandthee.jpg" alt="Me and Thee" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>Me and Thee</h3>
+                        <p class="data">
+                            Novembro 2025 - Janeiro 2026
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            William como 'Rome' (Convidado)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5 - A Dog and a Plane -->
+                <div class="serie-card">
+                    <img src="img/adogandaplane.jpg" alt="A Dog and a Plane" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>A Dog and a Plane</h3>
+                        <p class="data">
+                            Maio - Julho 2026
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            Tui como 'Beer' (Papel Secundário)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6 - Peach and Me -->
+                <div class="serie-card">
+                    <img src="img/peachandme.jpg" alt="Peach and Me" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>Peach and Me</h3>
+                        <p class="data">
+                            Em gravação
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            William como 'Rome' (Papel secundário)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7 - You Maniac -->
+                <div class="serie-card">
+                    <img src="img/youmaniac.jpg" alt="You Maniac" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>You Maniac</h3>
+                        <p class="data">
+                            Em gravação
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            William como 'Dean' (Papel principal)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8 - Twenty One -->
+                <div class="serie-card">
+                    <img src="img/twentyone.jpg" alt="Twenty One" loading="lazy">
+
+                    <div class="serie-info">
+                        <h3>Twenty One</h3>
+                        <p class="data">
+                            Gravação depois de agosto 2026
+                        </p>
+                        <p>
+                            <strong>Membro(s):</strong><br>
+                            Nut como 'Way' (Papel Secundário) e Hong como 'Night' (Papel Secundário)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
     </main>

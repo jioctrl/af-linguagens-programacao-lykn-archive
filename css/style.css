@@ -6,8 +6,11 @@ Professor: Abimael de Oliveira
 Data de entrega: 07/06
 */
 
+/* @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&display=swap');
+
 :root {
-    --cor-primaria: #545fc2;
+    --cor-primaria: #2a416d;
     --cor-secundaria: #2f3a46;
     --cor-clara: #f8f9fa;
     --cor-escura: #111;
@@ -26,6 +29,8 @@ body {
     color: var(--cor-escura);
     line-height: 1.6;
     padding-top: 70px;
+    margin: 0;
+    padding: 0px;
 }
 
 img {
@@ -38,7 +43,7 @@ section {
 }
 
 .rodape {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
     color: white;
     text-align: center;
     padding: 30px 15px;
@@ -52,20 +57,72 @@ section {
     width: 100%;
 }
 
-/* carrossel membros */
-.carrossel {
+header {
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #2a416d;
+    padding: 12px 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu h1 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.titulo-menu {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+
+.carousel-item,
+.carousel-inner {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+/* Carrossel membros */
+.carrossel-membros {
     position: relative;
     width: 90%;
-    max-width: 1200px;
-    height: 500px;
+    max-width: 1300px;
+    height: auto;
     margin: 40px auto;
     overflow: hidden;
     border-radius: 12px;
     background: white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-top: 0.9rem;
 }
 
-.slide {
+.slides {
     display: none;
     width: 100%;
     height: 100%;
@@ -74,12 +131,21 @@ section {
 .slide-ativo {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-.imagem,
+.imagem {
+    width: 40%;
+}
+
 .texto {
-    width: 50%;
+    padding: 15px;
+
+    width: 60%;
+}
+
+#nome-membros {
+    font-weight: bold;
 }
 
 .imagem img {
@@ -114,4 +180,102 @@ section {
 .anterior:hover,
 .proximo:hover {
     background: rgba(0,0,0,0.8);
+}
+
+.hero {
+    padding: 0;
+    padding-bottom: 3rem;
+}
+
+
+.apresentacao {
+    margin-left: 1rem;
+    padding-left: 1rem;
+
+    margin-right: 1rem;
+    padding-right: 1rem;
+
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.apresentacao p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.apresentacao h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.caixa-membros h2, 
+.destaques h2 {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.texto p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.texto h3 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+}
+
+
+
+/* Parte das séries */
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 20em));
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.serie-card {
+    background: #ebebeb;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.serie-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.serie-info {
+    padding: 1rem;
+    font-size: 90%;
+}
+
+.serie-info h3 {
+    margin-bottom: 0.3rem;
+    font-size: 160%;
+    font-weight: bold;
+}
+
+.data {
+    color: #a1a1a1;
+    margin-bottom: 0.3rem;
 }

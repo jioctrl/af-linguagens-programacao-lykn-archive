@@ -11,7 +11,7 @@ Data de entrega: 07/06
 
 :root {
     --cor-primaria: #2a416d;
-    --cor-secundaria: #2f3a46;
+    --cor-secundaria: #d1e1ff48;
     --cor-clara: #f8f9fa;
     --cor-escura: #111;
     --espacamento-padrao: 2rem;
@@ -263,7 +263,7 @@ nav a {
 }
 
 .serie-card {
-    background: #cfdbf1;
+    background: var(--cor-secundaria);
     border-radius: 15px;
     overflow: hidden;
 }
@@ -291,7 +291,7 @@ nav a {
 }
 
 
-/* Galeria Comebacks */
+/* Galeria - Comebacks */
 .poster-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8em, 16em));
@@ -334,11 +334,11 @@ nav a {
     object-fit: cover;
 }
 
-.lancamentos h2 {
+.titulo-lancamentos h2 {
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 4rem;
     margin-bottom: 0;
     padding-top: 40px;
 }
@@ -365,4 +365,116 @@ nav a {
 .card-body {
     line-height: 0.8;
     padding-bottom: 1.5rem;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* Galeria - Schedule/Eventos */
+.schedule {
+    margin: 3rem 0;
+}
+
+.schedule-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    line-height: 1rem;
+}
+
+.schedule-header h2 {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 0;
+    padding-top: 40px;
+}
+
+.schedule-header span {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.schedule-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.schedule-item {
+    display: flex;
+    flex: 1 1 500px;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: var(--cor-secundaria);
+}
+
+.schedule-date {
+    font-family: "League Spartan", sans-serif;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1rem;
+}
+
+.dia {
+    font-size: 2.7rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.horario {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+.fuso-horario {
+    font-size: 0.7rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.schedule-info {
+    flex: 1;
+}
+
+.schedule-info h3 {
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 650;
+    letter-spacing: 0.2px;
+}
+
+.schedule-info p {
+    margin: 0.3rem 0 0.8rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.schedule-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.schedule-members span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    background-color: #bbcbe950;
 }

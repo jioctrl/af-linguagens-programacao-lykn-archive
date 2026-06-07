@@ -23,7 +23,6 @@ window.addEventListener("scroll", () => {
     ultimoScroll = scrollAtual;
 });
 
-
 // Formulario
 const formulario = document.querySelector('#formContato');
 
@@ -45,10 +44,13 @@ if (formulario) {
 }
 
 // Carrossel membros
+const cmembros = document.querySelector('.carrossel-membros');
+
 const slides = document.querySelectorAll(".slides, .slide-ativo");
 const btnAnterior = document.querySelector(".anterior");
 const btnProximo = document.querySelector(".proximo");
 
+if (cmembros) {
 let slideAtual = 0;
 
 function mostrarSlide(indice) {
@@ -81,3 +83,27 @@ btnAnterior.addEventListener("click", () => {
 
     mostrarSlide(slideAtual);
 });
+}
+
+// Botão pra expandir os lançamentos
+const botao = document.getElementById("toggleLancamentos");
+
+if (botao) {
+
+    const cardsExtras = document.querySelectorAll(
+        ".comeback-card:nth-child(n+5)"
+    );
+
+    botao.addEventListener("click", () => {
+
+        cardsExtras.forEach(card => {
+            card.classList.toggle("oculto");
+        });
+
+        botao.textContent =
+            botao.textContent === "Ver todos os lançamentos →"
+                ? "Mostrar menos ←"
+                : "Ver todos os lançamentos →";
+    });
+
+}

@@ -6,6 +6,24 @@ Professor: Abimael de Oliveira
 Data de entrega: 07/06
 */
 
+
+// Scroll pro menu sumir/aparecer
+let ultimoScroll = window.pageYOffset;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    const scrollAtual = window.pageYOffset;
+
+    if (scrollAtual > ultimoScroll) {
+        header.classList.add("header-escondido");
+    } else {
+        header.classList.remove("header-escondido");
+    }
+
+    ultimoScroll = scrollAtual;
+});
+
+
 // Formulario
 const formulario = document.querySelector('#formContato');
 

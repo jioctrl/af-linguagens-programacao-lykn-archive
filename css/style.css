@@ -60,6 +60,17 @@ section {
 header {
     margin-top: 0;
     padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    transition: transform 0.3s ease;
+}
+
+.header-escondido {
+    transform: translateY(-100%);
 }
 
 .menu {
@@ -118,7 +129,7 @@ nav a {
     overflow: hidden;
     border-radius: 12px;
     background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     margin-top: 0.9rem;
 }
 
@@ -140,7 +151,6 @@ nav a {
 
 .texto {
     padding: 15px;
-
     width: 60%;
 }
 
@@ -161,7 +171,7 @@ nav a {
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -179,7 +189,7 @@ nav a {
 
 .anterior:hover,
 .proximo:hover {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .hero {
@@ -202,7 +212,7 @@ nav a {
     padding-bottom: 1rem;
 
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 
     position: relative;
     width: 90%;
@@ -221,7 +231,7 @@ nav a {
     justify-content: center;
 }
 
-.caixa-membros h2, 
+.caixa-membros h2,
 .destaques h2 {
     text-align: center;
     font-family: "League Spartan", sans-serif;
@@ -253,7 +263,7 @@ nav a {
 }
 
 .serie-card {
-    background: #ebebeb;
+    background: #cfdbf1;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -278,4 +288,81 @@ nav a {
 .data {
     color: #a1a1a1;
     margin-bottom: 0.3rem;
+}
+
+
+/* Galeria Comebacks */
+.poster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8em, 16em));
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.individual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+.poster-grid img {
+    width: 100%;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.individual-grid img {
+    width: 100%;
+    border-radius: 1px;
+}
+
+.comeback-card {
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.comeback-card:hover {
+    transform: translateY(-8px);
+}
+
+.modal-body iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.lancamentos h2 {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 0;
+    padding-top: 40px;
+}
+
+.modal-body p, 
+.card-body p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.modal-header h5 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-body h5 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    line-height: 0.8;
+    padding-bottom: 1.5rem;
 }

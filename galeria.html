@@ -20,7 +20,9 @@ Data de entrega: 07/06
 <body>
     <header class="menu">
         <h1 class="titulo-menu">LYKN Archive</h1>
-        <nav>
+
+        <button class="hamburger" id="hamburger">☰</button>
+        <nav id="nav">
             <a href="index.html">Home</a>
             <a href="galeria.html">Galeria</a>
             <a href="contato.html">Contato</a>
@@ -31,9 +33,18 @@ Data de entrega: 07/06
         <section class="lancamentos">
             <div class="titulo-lancamentos">
                 <h2>LANÇAMENTOS</h2>
+            <div>
+                <p id="explicacao">
+                    Diferente dos grupos/artistas num geral, os grupos de T-pop tem uma
+                    tendência a lançar singles ao invés de um álbum com várias músicas de uma vez só,
+                    dando uma atenção maior às músicas individualmente.
+                    E enquanto grupos de K-pop anunciam álbuns mais de um mês antes do lançamento, os
+                    grupos de T-pop lançam os singles em menos de uma semana.
+                </p>
+            </div>
                 <button id="toggleLancamentos">Ver todos os lançamentos →</button>
             </div>
-
+                
             <div class="poster-grid">
                 <!-- 1 - May I -->
                 <article class="card comeback-card" data-bs-toggle="modal" data-bs-target="#mayiModal">
@@ -190,13 +201,14 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">May I</h5>
+                            <h2 class="modal-title">May I</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
 
                         <div class="modal-body">
-                            <iframe src="https://www.youtube.com/embed/eH7nqC19Sqg?autoplay=1" title="May I"
+                            <!-- Esse video parece não funcionar na Incorporação -->
+                            <iframe src="https://www.youtube.com/embed/eH7nqC19Sqg?si=EleHr4ybaf8Ez9o8" title="May I"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
                             </iframe>
 
@@ -218,7 +230,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Umm Umm</h5>
+                            <h2 class="modal-title">Umm Umm</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -246,7 +258,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">No Worries</h5>
+                            <h2 class="modal-title">No Worries</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -275,7 +287,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Charm</h5>
+                            <h2 class="modal-title">Charm</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -303,7 +315,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Trust Me</h5>
+                            <h2 class="modal-title">Trust Me</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -331,7 +343,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Sugoi</h5>
+                            <h2 class="modal-title">Sugoi</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -359,7 +371,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Trick or Treat</h5>
+                            <h2 class="modal-title">Trick or Treat</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -388,7 +400,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">LYKYOU</h5>
+                            <h2 class="modal-title">LYKYOU</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -416,7 +428,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">First Sight</h5>
+                            <h2 class="modal-title">First Sight</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -445,7 +457,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Drip</h5>
+                            <h2 class="modal-title">Drip</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -473,7 +485,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Foreground</h5>
+                            <h2 class="modal-title">Foreground</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -502,7 +514,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Feel Like Me</h5>
+                            <h2 class="modal-title">Feel Like Me</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -531,7 +543,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">No Way</h5>
+                            <h2 class="modal-title">No Way</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -559,7 +571,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Let's Go</h5>
+                            <h2 class="modal-title">Let's Go</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -584,7 +596,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">If Only</h5>
+                            <h2 class="modal-title">If Only</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -612,7 +624,7 @@ Data de entrega: 07/06
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">You Shine I Choose</h5>
+                            <h2 class="modal-title">You Shine I Choose</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                             </button>
                         </div>
@@ -640,6 +652,17 @@ Data de entrega: 07/06
             <div class="schedule-header">
                 <h2>SCHEDULE</h2>
                 <span>Junho 2026</span>
+                <div>
+                    <p id="explicacao">
+                        'Schedule' se trata do calendário do artista, quais eventos ele vai participar.
+                        No caso dos artistas tailandeses num geral é muito comum ter eventos em lugares públicos,
+                        onde qualquer um pode assistir ao evento. Muitas vezes esses eventos são feitos em certos 
+                        cantos de grandes shoppings. Grupos de T-pop participam de 'festivais' que começam de tarde
+                        e vão até tarde da noite. E artistas que estão em um CP (par/casal), como o William está
+                        com o Est, também tem eventos como CP, além de os membros do grupo também serem contratados
+                        para eventos solo ou em dupla.
+                    </p>
+            </div>
             </div>
 
             <div class="schedule-list">
@@ -933,12 +956,16 @@ Data de entrega: 07/06
             </div>
         </section>
 
+        <button id="btnTopo" class="btn-topo">↑</button>
+
     </main>
 
     <footer>
         <div class="rodape">
+            <p>LYKN Archive</p>
+            <p><a href="index.html">Home</a> | <a href="galeria.html">Galeria</a> | <a href="contato.html">Contato</a></p>
             <p>Projeto desenvolvido para a AF - Linguagens de Programação.</p>
-            <p>Aluna: Giovana Fernandes Zorzenone - RA: 251804</p>
+            <p>Feito por: Giovana Fernandes Zorzenone - RA: 251804</p>
             <p>&copy; 2026 - Projeto acadêmico sem fins comerciais.</p>
         </div>
     </footer>

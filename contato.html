@@ -19,7 +19,9 @@ Data de entrega: 07/06
 <body>
     <header class="menu">
         <h1 class="titulo-menu">LYKN Archive</h1>
-        <nav>
+
+        <button class="hamburger" id="hamburger">☰</button>
+        <nav id="nav">
             <a href="index.html">Home</a>
             <a href="galeria.html">Galeria</a>
             <a href="contato.html">Contato</a>
@@ -28,21 +30,26 @@ Data de entrega: 07/06
 
     <main>
         <div class="container">
-        <h2>Entre em contato:</h2>
+        <h2 id="titulo-contato">Entre em contato</h2>
+            <p id="explicacao">
+                Preencha todos os campos do formulário. Pode ser utilizado para apenas mandar
+                uma mensagem, tirar alguma dúvida, ou mandar alguma sugestão do que mudar ou 
+                adicionar ao site, sinta-se à vontade!
+            </p>
         <form class="form-contato" action="#" method="post">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome completo:</label>
-                <input type="text" id="nome" name="nome" class="form-control" required>
+                <input type="text" id="nome" name="nome" class="form-control" required placeholder="Digite seu nome completo">
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" required placeholder="_______@gmail.com">
+                <input type="email" id="email" name="email" class="form-control" required placeholder="seuemail@gmail.com">
             </div>
 
             <div class="mb-3">
                 <label for="telefone" class="form-label">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(XX) 998XX-XXXX">
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(XX) XXXXX-XXXX">
             </div>
 
             <div class="mb-3">
@@ -57,7 +64,7 @@ Data de entrega: 07/06
 
             <div class="mb-3">
                 <label for="mensagem" class="form-label">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" class="form-control" rows="5" required></textarea>
+                <textarea id="mensagem" name="mensagem" class="form-control" rows="5" required placeholder="Escreva aqui sua mensagem!"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Enviar</button>
@@ -65,21 +72,44 @@ Data de entrega: 07/06
         </form>
         </div>
 
-        <div class="container">
+        <div class="container" id="mapa">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1937.7882679117852!2d100.5640425!3d13.7440687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29fa9fa8577f5%3A0xd79928fa092e61e2!2sGMM%20Grammy%20Place%20Building!5e0!3m2!1spt-BR!2sbr!4v1780622567764!5m2!1spt-BR!2sbr"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <p>Endereço GMM - Empresa do LYKN</p>
+                <p id="desc-mapa">Endereço GMM - Empresa do LYKN</p>
             </div>
+
+            <section class="sociais">
+                <h2 class="titulo-sociais">REDES SOCIAIS</h2>
+
+                <div class="sociais-links">
+                    <div class="social">
+                        <img src="./img/x-icone.png" alt="Logo X">
+                        <a href="https://x.com/LYKNofficial">@LYKNofficial</a>
+                    </div>
+                    <div class="social">
+                        <img src="./img/instagram-icone.png" alt="Logo Instagram">
+                        <a href="https://www.instagram.com/lykn_official/">@lykn_official</a>
+                    </div>
+                    <div class="social">
+                        <img src="./img/tiktok-icone.png" alt="Logo Tiktok">
+                        <a href="https://www.tiktok.com/@lyknofficial">@lyknofficial</a>
+                    </div>
+                </div>
+            </section>
+
+            <button id="btnTopo" class="btn-topo">↑</button>
 
     </main>
 
     <footer>
         <div class="rodape">
+            <p>LYKN Archive</p>
+            <p><a href="index.html">Home</a> | <a href="galeria.html">Galeria</a> | <a href="contato.html">Contato</a></p>
             <p>Projeto desenvolvido para a AF - Linguagens de Programação.</p>
-            <p>Aluna: Giovana Fernandes Zorzenone - RA: 251804</p>
+            <p>Feito por: Giovana Fernandes Zorzenone - RA: 251804</p>
             <p>&copy; 2026 - Projeto acadêmico sem fins comerciais.</p>
         </div>
     </footer>

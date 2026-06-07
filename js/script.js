@@ -23,6 +23,36 @@ window.addEventListener("scroll", () => {
     ultimoScroll = scrollAtual;
 });
 
+// Menu hamburger em telas menores
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("ativo");
+    });
+}
+
+
+// Botão de voltar ao topo
+const btnTopo = document.querySelector('#btnTopo');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        btnTopo.classList.add('mostrar');
+    } else {
+        btnTopo.classList.remove('mostrar');
+    }
+});
+
+btnTopo.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
 // Formulario
 const formulario = document.querySelector('#formContato');
 
@@ -50,7 +80,7 @@ const slides = document.querySelectorAll(".slides, .slide-ativo");
 const btnAnterior = document.querySelector(".anterior");
 const btnProximo = document.querySelector(".proximo");
 
-if (cmembros) {
+if (cmembros && btnProximo && btnAnterior) {
 let slideAtual = 0;
 
 function mostrarSlide(indice) {
@@ -89,13 +119,11 @@ btnAnterior.addEventListener("click", () => {
 const botao = document.getElementById("toggleLancamentos");
 
 if (botao) {
-
     const cardsExtras = document.querySelectorAll(
-        ".comeback-card:nth-child(n+5)"
+        ".comeback-card:nth-child(n+7)"
     );
 
     botao.addEventListener("click", () => {
-
         cardsExtras.forEach(card => {
             card.classList.toggle("oculto");
         });

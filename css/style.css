@@ -13,7 +13,7 @@ Data de entrega: 07/06
     --cor-primaria: #2a416d;
     --cor-secundaria: #d1e1ff48;
     --cor-clara: #f8f9fa;
-    --cor-escura: #111;
+    --cor-escura: #191a29;
     --espacamento-padrao: 2rem;
 }
 
@@ -31,6 +31,23 @@ body {
     padding-top: 70px;
     margin: 0;
     padding: 0px;
+    padding-top: 3.5rem;
+}
+
+
+/* Animação leve pra quando 
+mudar de uma página para a outra */
+main {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 img {
@@ -42,6 +59,7 @@ section {
     padding: 60px 0;
 }
 
+/* Rodapé/Footer da página */
 .rodape {
     background-color: var(--cor-primaria);
     color: white;
@@ -53,13 +71,34 @@ section {
     line-height: 0.6;
 }
 
-.banner-principal img {
-    width: 100%;
+.rodape a {
+    text-decoration: none;
+    color: white;
 }
 
+/* Botão voltar ao topo */
+.btn-topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    padding: 8px 16px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-topo.mostrar {
+    display: block;
+}
+
+/* Menu - Funções: 
+- Sumir quando dar scroll pra baixo, e aparecer quando der scroll de voltapra cima; 
+- Menu Hamburger quando a tela for menor. */
 header {
     margin-top: 0;
-    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -88,6 +127,13 @@ header {
     padding-left: 20px;
 }
 
+.titulo-menu {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 2.5rem;
+}
+
 nav {
     display: flex;
     gap: 20px;
@@ -97,29 +143,113 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
 }
 
-.titulo-menu {
-    font-family: "League Spartan", sans-serif;
-    font-weight: bolder;
+/* Menu - Celular/tela menor */
+.hamburger {
+    display: none;
+
+    background: none;
+    border: none;
+
     color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    font-size: 20px;
+
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
 }
 
+@media (max-width: 768px) {
 
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        width: 100%;
+        margin-top: 15px;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+}
+
+/* Padronização do tamanho das imagens no carrossel principal */
 .carousel-item,
 .carousel-inner {
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
+/* Destaque no texto do carrossel para aparecer melhor */
 .carousel-caption {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
 }
 
-/* Carrossel membros */
+
+.hero {
+    padding: 0;
+    padding-bottom: 3rem;
+}
+
+
+/* Caixa de texto dando contexto ao site/o grupo em si */
+.apresentacao {
+    margin-left: 1rem;
+    padding-left: 1rem;
+
+    margin-right: 1rem;
+    padding-right: 1rem;
+
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.apresentacao p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.apresentacao h2 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Carrossel dos membros, metade foto metade texto */
 .carrossel-membros {
     position: relative;
     width: 90%;
@@ -149,6 +279,12 @@ nav a {
     width: 40%;
 }
 
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .texto {
     padding: 15px;
     width: 60%;
@@ -157,13 +293,6 @@ nav a {
 #nome-membros {
     font-weight: bold;
 }
-
-.imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 .anterior,
 .proximo {
@@ -192,51 +321,12 @@ nav a {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.hero {
-    padding: 0;
-    padding-bottom: 3rem;
-}
-
-
-.apresentacao {
-    margin-left: 1rem;
-    padding-left: 1rem;
-
-    margin-right: 1rem;
-    padding-right: 1rem;
-
-    margin-top: 1rem;
-    padding-top: 1rem;
-
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.apresentacao p {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 500;
-}
-
-.apresentacao h2 {
-    font-family: "League Spartan", sans-serif;
-    font-weight: bold;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .caixa-membros h2,
 .destaques h2 {
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 3.7rem;
     margin-bottom: 0;
 }
 
@@ -252,11 +342,10 @@ nav a {
 }
 
 
-
-/* Parte das séries */
+/* Caixa flex das séries */
 .series-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 20em));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
     padding: 1rem;
@@ -266,6 +355,13 @@ nav a {
     background: var(--cor-secundaria);
     border-radius: 15px;
     overflow: hidden;
+    width: 20em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .serie-card img {
@@ -286,15 +382,15 @@ nav a {
 }
 
 .data {
-    color: #a1a1a1;
+    color: #a1a9b9;
     margin-bottom: 0.3rem;
 }
 
 
-/* Galeria - Comebacks */
+/* Galeria - Caixa flex dos comebacks */
 .poster-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8em, 16em));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     padding: 1rem;
@@ -321,12 +417,14 @@ nav a {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 7px 7px 7px 7px;
+    width: 16em;
 }
 
 .comeback-card:hover {
     transform: translateY(-8px);
 }
 
+/* Bootstrap, uso do 'modal' para detalhar os comebacks com o videoclipe + pôsteres individuais */
 .modal-body iframe {
     width: 100%;
     height: auto;
@@ -338,9 +436,8 @@ nav a {
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.7rem;
     margin-bottom: 0;
-    padding-top: 40px;
 }
 
 .modal-body p, 
@@ -350,7 +447,7 @@ nav a {
     text-align: justify;
 }
 
-.modal-header h5 {
+.modal-header h2 {
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
@@ -365,10 +462,47 @@ nav a {
 .card-body {
     line-height: 0.8;
     padding-bottom: 1.5rem;
+    color: var(--cor-escura);
 }
 
 .oculto {
     display: none;
+}
+
+.titulo-lancamentos {
+    justify-content: center;
+    align-items: center;
+}
+
+#explicacao {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-align: center;
+
+    margin: 0 auto;
+
+    padding-bottom: 20px;
+    padding-top: 0;
+    width: 80%;
+}
+
+#toggleLancamentos {
+    padding: 0.3rem;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: 4rem;
+
+    background: linear-gradient(90deg, #b8d1ff, #d2e1ff);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#toggleLancamentos:hover {
+    transform: scale(0.96);
 }
 
 
@@ -383,23 +517,24 @@ nav a {
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
-    line-height: 1rem;
+    padding-bottom: 0;
 }
 
 .schedule-header h2 {
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.7rem;
     margin-bottom: 0;
     padding-top: 40px;
+    line-height: 1rem;
 }
 
 .schedule-header span {
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    margin-bottom: 0;
+    margin-bottom: 0.3rem;
 }
 
 .schedule-list {
@@ -477,4 +612,77 @@ nav a {
     border-radius: 20px;
     font-size: 0.85rem;
     background-color: #bbcbe950;
+}
+
+/* Página > Contato */
+#titulo-contato {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 3.7rem;
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
+
+.form-contato,
+.form-control,
+.form-select {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+
+.form-contato button:hover {
+    transform: 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.96);
+}
+
+#mapa {
+    margin-top: 3rem;
+}
+
+#mapa iframe {
+    border-radius: 10px;
+}
+
+#desc-mapa {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.sociais {
+    text-align: center;
+}
+
+.sociais-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social img {
+    width: 2rem;
+}
+
+.social a {
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: var(--cor-escura);
+}
+
+.titulo-sociais {
+    text-align: center;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 2rem;
 }

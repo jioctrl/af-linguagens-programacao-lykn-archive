@@ -23,6 +23,7 @@ Site introduzindo o grupo de T-pop LYKN: os membros, seus trabalhos, etc.
 - Carrossel Bootstrap
 - Carrossel próprio
 - Galeria de lançamentos
+- Seção de Schedule/Calendário
 - Formulário de contato
 - Mapa incorporado
 - Animações CSS/JS
